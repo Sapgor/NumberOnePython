@@ -1,18 +1,12 @@
-def rectangle_area(width, height):
-    return width * height
+def is_even(number):
+    return number % 2 == 0
 while True:
-        print("вычисление площади прямоугольника")
-        try:
-            width = int(input("Введите ширину: "))
-            if width < 1:
-                print ("Ошибка: введено отрицательное число или 0")
-                continue
-            else:
-                height = int(input("Введите высоту: "))
-            if height < 1:
-                print ("Ошибка: введено отрицательное число или 0")
-                continue
-            else:
-                print("Результат:", rectangle_area(width, height))
-        except ValueError:
-            print("ошибка введено не число")
+    try:
+        number = int(input("введите число: "))
+    except:
+        print("введено не число")
+        continue
+    if(is_even(number)):
+        print("число чётное")
+    else:
+        print("число нечётное")
